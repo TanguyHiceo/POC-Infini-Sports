@@ -29,8 +29,8 @@ const DESIGN_LIST = [
 const COLOR_PALETTE = {
   noir: '#000000',
   blanc: '#FFFFFF',
-  // 'blanc-casser': '#e8e8e8',
-  'blanc-casser': '#8f1736',
+  'blanc-casser': '#e8e8e8',
+  // 'blanc-casser': '#8f1736',
   gris: '#CCCCCC',
   marine: '#001F5A',
   jaune: '#f5e814',

@@ -18,6 +18,7 @@ function getColorsMap() {
         '--clr-2': rootStyles.getPropertyValue('--clr-2').trim(),
         '--clr-2-light': rootStyles.getPropertyValue('--clr-2-light').trim(),
         '--clr-2-dark': rootStyles.getPropertyValue('--clr-2-dark').trim(),
+        '--clr-3': rootStyles.getPropertyValue('--clr-3').trim(),
         '--clr-logo': rootStyles.getPropertyValue('--clr-logo').trim(),
     };
 }
