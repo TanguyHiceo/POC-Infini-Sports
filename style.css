@@ -48,7 +48,7 @@ body {
   align-items: flex-end;
   width: 100%;
   height: calc( 1300px * 3351 / 6000); 
-  background: url('/BASKET.png');
+  background: url('./public/BASKET.png');
   background-size: cover;
 }
 .woman{
@@ -56,7 +56,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  background: url('/woman.png');
+  background: url('./public/woman.png');
   height: 500px;
   width: 500px;
   background-size: contain;
