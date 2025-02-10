@@ -130,7 +130,7 @@ function convertSVGToJPG(svgElement, fileName) {
         // Dessiner l'image SVG sur le canvas
         ctx.drawImage(img, 0, 0);
 
-        addLogoWatermark(canvas, ctx, "/assets/images/FR4183347-removebg.png");
+        addLogoWatermark(canvas, ctx, "./public/assets/images/FR4183347-removebg.png");
 
         // Obtenir l'image JPG en Base64
         setTimeout(() => {
