@@ -19,6 +19,6 @@ export function switchDesign() {
   designTitle.innerHTML = DESIGN_LIST[state.currentDesign];
 
   // Charger les nouveaux designs
-  loadSVG(`/woman/game-${DESIGN_LIST[state.currentDesign]}-woman.svg`, 'woman-shirt-svg-container');
+  loadSVG(`../../../woman/game-${DESIGN_LIST[state.currentDesign]}-woman.svg`, 'woman-shirt-svg-container');
   // loadSVG(`/classic/game-${DESIGN_LIST[state.currentDesign]}.svg`, 'classic-shirt-svg-container');
 }
