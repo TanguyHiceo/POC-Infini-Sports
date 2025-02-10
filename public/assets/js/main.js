@@ -1,4 +1,4 @@
-import '/style.css';
+import './style.css';
 import { switchDesign } from "./modules/switchDesign.js";
 import { buttonsListener } from './modules/buttonsListener.js';
 // import { switchBackground } from './modules/switchBackground.js';
