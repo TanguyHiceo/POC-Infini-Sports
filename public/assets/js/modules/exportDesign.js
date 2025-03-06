@@ -157,7 +157,7 @@ function convertSVGToJPG(svgElement, fileName) {
  * Main function for export
  */
 export function exportSVGWithColors(){
-    const svgContainer = document.getElementById('woman-shirt-svg-container');
+    const svgContainer = document.getElementById('model-shirt-svg-container');
     if (!svgContainer) return;
     
     const svgElement = svgContainer.querySelector('svg');

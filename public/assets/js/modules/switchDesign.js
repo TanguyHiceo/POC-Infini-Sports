@@ -1,8 +1,9 @@
 /**
  * Switch Design
  */
-import { DESIGN_START, DESIGN_LIST, state } from '../global.js';
+import { DESIGN_START, DESIGN_LIST, state, MODEL_CONFIG } from '../global.js';
 import { loadSVG } from './loadSVG.js';
+import { updateShirtAfterDesignChange } from './switchModel.js';
 
 const designSwitcher = document.querySelector('#design-switcher');
 const designTitle = document.querySelector('#design-title');
@@ -18,7 +19,11 @@ export function switchDesign() {
   // Afficher le titre
   designTitle.innerHTML = DESIGN_LIST[state.currentDesign];
 
-  // Charger les nouveaux designs
-  loadSVG(`./public/woman/game-${DESIGN_LIST[state.currentDesign]}-woman.svg`, 'woman-shirt-svg-container');
+  // Charger les nouveaux designs selon le modèle
+  const currentModel = MODEL_CONFIG[state.currentModel]
+  // loadSVG(`./public/woman/game-${DESIGN_LIST[state.currentDesign]}-woman.svg`, 'model-shirt-svg-container');
+  loadSVG(currentModel.svgPath(DESIGN_LIST[state.currentDesign]), 'model-shirt-svg-container');
   // loadSVG(`/classic/game-${DESIGN_LIST[state.currentDesign]}.svg`, 'classic-shirt-svg-container');
+
+  updateShirtAfterDesignChange();
 }

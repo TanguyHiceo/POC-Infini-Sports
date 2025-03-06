@@ -11,11 +11,66 @@
   <body>
     <div class="main">
       <section class="banner">
-        <div class="woman">
-          <div id="woman-shirt-svg-container">
+        <div class="model">
+          <div id="model-shirt-svg-container">
           </div>
-          <div class="woman-shadow-container">
-            <img src="./public/shadow.png" alt="Ombres maillots">
+          <div class="model-shadow-container">
+            <img src="./public/shadow/shadow-game-woman.png" alt="Ombres maillots">
+          </div>
+        </div>
+        <div class="model-filter">
+          <span class="title">FILTRE<i class="fa-solid fa-sliders"></i></span>
+        </div>
+        <div class="model-menu-filter">
+          <div class="container">
+            <div class="close-icon"></div>
+            <div class="model-selection">
+              <span class="text">Modèle</span>
+              <ul>
+                <li class="item active">
+                  <div class="preview"><img src="./public/preview/game-woman/aquarius.png" alt="Preview Game"></div>
+                  <span class="preview-title">Game</span>
+                </li>
+                <li class="item">
+                  <div class="preview"><img src="./public/preview/game-woman/aquarius.png" alt="Preview Game"></div>
+                  <span class="preview-title">Ligue</span>
+                </li>
+                <li class="item">
+                  <div class="preview"><img src="./public/preview/game-woman/aquarius.png" alt="Preview Game"></div>
+                  <span class="preview-title">Pro</span>
+                </li>
+                <li class="item">
+                  <div class="preview"><img src="./public/preview/game-woman/aquarius.png" alt="Preview Game"></div>
+                  <span class="preview-title">Elite</span>
+                </li>
+                <li class="item">
+                  <div class="preview"><img src="./public/preview/game-woman/aquarius.png" alt="Preview Game"></div>
+                  <span class="preview-title">Reverse</span>
+                </li>
+                <li class="item">
+                  <div class="preview"><img src="./public/preview/game-woman/aquarius.png" alt="Preview Game"></div>
+                  <span class="preview-title">Shooting</span>
+                </li>
+              </ul>
+            </div>
+            <div class="divider"></div>
+            <div class="gender-selection">
+              <span class="text">Genre</span>
+              <ul>
+                <li class="item">
+                  <label for="men">Homme</label>
+                  <input type="checkbox" name="men" id="" class="item-check">
+                </li>
+                <li class="item">
+                  <label for="men">Femme</label>
+                  <input type="checkbox" name="women" id="" class="item-check" checked>
+                </li>
+                <li class="item">
+                  <label for="men">Enfant</label>
+                  <input type="checkbox" name="kids" id="" class="item-check">
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <!-- <div class="switch-background">
@@ -26,16 +81,196 @@
           <button id="export-button"><i class="fa-solid fa-download"></i></button>
         </div>
       </section>
-      <section class="main-container">
-          <div class="preview-container">
-              <div id="classic-shirt-svg-container"></div>
+      <section class="navigation-container">
+        <div class="nav-header">
+          <ul>
+            <li class="nav-item"><span>Design</span></li>
+            <li class="nav-item active"><span>Couleur</span></li>
+          </ul>
+        </div>
+        <div class="nav-row">
+            <div class="preview-model">
+              <div class="preview-model-item">
+                <img src="/public/preview/game-woman/aquarius.png">
+                <span>Aquarius</span>
+              </div>
+              <div class="preview-model-item">
+                <img src="/public/preview/game-woman/aquila.png">
+                <span>Aquila</span>
+              </div>
+              <div class="preview-model-item">
+                <img src="/public/preview/game-woman/auriga.png">
+                <span>Auriga</span>
+              </div>
+              <div class="preview-model-item">
+                <img src="/public/preview/game-woman/australe.png">
+                <span>Australe</span>
+              </div>
+              <div class="preview-model-item">
+                <img src="/public/preview/game-woman/centaurus.png">
+                <span>Centaurus</span>
+              </div>
+              <div class="preview-model-item">
+                <img src="/public/preview/game-woman/columba.png">
+                <span>Columba</span>
+              </div>
+              <div class="preview-model-item">
+                <img src="/public/preview/game-woman/corona.png">
+                <span>Corona</span>
+              </div>
+              <div class="preview-model-item">
+                <img src="/public/preview/game-woman/draco.png">
+                <span>Draco</span>
+              </div>
+              <div class="preview-model-item">
+                <img src="/public/preview/game-woman/gemini.png">
+                <span>Gemini</span>
+              </div>
+              <div class="preview-model-item">
+                <img src="/public/preview/game-woman/hydra.png">
+                <span>Hydra</span>
+              </div>
+              <div class="preview-model-item">
+                <img src="/public/preview/game-woman/leo.png">
+                <span>Leo</span>
+              </div>
+              <div class="preview-model-item">
+                <img src="/public/preview/game-woman/libra.png">
+                <span>Libra</span>
+              </div>
+              <div class="preview-model-item">
+                <img src="/public/preview/game-woman/mensa.png">
+                <span>Mensa</span>
+              </div>
+              <div class="preview-model-item">
+                <img src="/public/preview/game-woman/norma.png">
+                <span>Norma</span>
+              </div>
+              <div class="preview-model-item">
+                <img src="/public/preview/game-woman/phoenix.png">
+                <span>Phoenix</span>
+              </div>
+              <div class="preview-model-item">
+                <img src="/public/preview/game-woman/vela.png">
+                <span>Vela</span>
+              </div>
+              <div class="preview-model-item">
+                <img src="/public/preview/game-woman/virgo.png">
+                <span>Virgo</span>
+              </div>
+            </div>
+        </div>
+        <div class="nav-row active">
+          <div class="preview-color">
+            <div class="color-palette-tooltip">
+              <div class="color-picker">
+                <button class="fixed-color" data-primary="noir" data-secondary="jaune" data-logo="blanc">
+                    <div class="divider"></div>
+                    <div class="divider"></div>
+                </button>
+                <button class="fixed-color" data-primary="noir" data-secondary="vert-clair" data-logo="blanc">
+                    <div class="divider"></div>
+                    <div class="divider"></div>
+                </button>
+                <button class="fixed-color" data-primary="noir" data-secondary="vert-prairie" data-logo="blanc" >
+                  <div class="divider"></div>
+                  <div class="divider"></div>
+                </button>
+                <button class="fixed-color" data-primary="noir" data-secondary="blanc" data-tertiary="blanc-casser" data-logo="noir">
+                  <div class="divider"></div>
+                  <div class="divider"></div>
+                </button>
+                <button class="fixed-color" data-primary="noir" data-secondary="orange" data-logo="blanc">
+                  <div class="divider"></div>
+                    <div class="divider"></div>
+                </button>
+                <button class="fixed-color" data-primary="marine" data-secondary="rose" data-logo="blanc">
+                  <div class="divider"></div>
+                    <div class="divider"></div>
+                </button>
+                <button class="fixed-color" data-primary="marine" data-secondary="orange" data-logo="blanc">
+                  <div class="divider"></div>
+                    <div class="divider"></div>
+                </button>
+                <button class="fixed-color active" data-primary="marine" data-secondary="rouge" data-logo="blanc">
+                  <div class="divider"></div>
+                    <div class="divider"></div>
+                </button>
+                <button class="fixed-color" data-primary="marine" data-secondary="blanc" data-tertiary="blanc-casser" data-logo="marine">
+                  <div class="divider"></div>
+                    <div class="divider"></div>
+                </button>
+                <button class="fixed-color" data-primary="royal" data-secondary="jaune" data-logo="blanc">
+                  <div class="divider"></div>
+                    <div class="divider"></div>
+                </button>
+                <button class="fixed-color" data-primary="rouge" data-secondary="blanc" data-tertiary="blanc-casser" data-logo="rouge">
+                  <div class="divider"></div>
+                    <div class="divider"></div>
+                </button>
+                <button class="fixed-color" data-primary="vert-foret" data-secondary="blanc" data-tertiary="blanc-casser" data-logo="vert-foret">
+                  <div class="divider"></div>
+                    <div class="divider"></div>
+                </button>
+                <button class="fixed-color" data-primary="turquoise" data-secondary="petrole" data-logo="blanc">
+                  <div class="divider"></div>
+                    <div class="divider"></div>
+                </button>
+                <button class="fixed-color" data-primary="vert-lime" data-secondary="anthracite" data-logo="blanc">
+                  <div class="divider"></div>
+                    <div class="divider"></div>
+                </button>
+                <button class="fixed-color" data-primary="or" data-secondary="noir" data-logo="blanc">
+                  <div class="divider"></div>
+                    <div class="divider"></div>
+                </button>
+                <button class="fixed-color" data-primary="bleu-ciel" data-secondary="bordeaux" data-logo="blanc">
+                  <div class="divider"></div>
+                    <div class="divider"></div>
+                </button>
+              </div>
+            </div>
           </div>
+        </div>
+        <!-- <div class="nav-export">
+          <div class="export-container">
+            <button id="export-button"><i class="fa-solid fa-download"></i> Sauvegarder le modèle</button>
+            <button><i class="fa-solid fa-download"></i> Sauvegarder le modèle</button>
+          </div>
+        </div> -->
+      </section>
+      <section class="additional-informations">
+        <div class="text">
+          <span>Ensemble short+maillot marquage logo + sponsors inclus</span>
+        </div>
+        <div class="container">
+          <div class="price">
+            <div class="content">
+              <span class="pr">39€00</span>
+              <span class="sub">TTC</span>
+            </div>
+          </div>
+          <div class="file-sheet">
+            <i class="fa-solid fa-download"></i>
+            <span>Fiche technique<br/>Guide des tailles</span>
+          </div>
+        </div>
+        <div class="export-container">
+          <button id="export-button"><i class="fa-solid fa-download" aria-hidden="true"></i>Sauvegarder</button>
+          <button><i class="fa-solid fa-folder"></i>Mes maquettes</button>
+          <button><i class="fa-solid fa-share"></i>Partager</button>
+        </div>
+      </section>
+      <section class="main-container">
+          <!-- <div class="preview-container">
+              <div id="classic-shirt-svg-container"></div>
+          </div> -->
           <div class="controls-container">
             <div class="design-switcher-container">
               <p id="design-title"></p>
               <button id="design-switcher">Suivant</button>
             </div>
-            <div class="color-picker">
+            <!-- <div class="color-picker">
               <button class="fixed-color" data-primary="noir" data-secondary="jaune" data-logo="blanc">
                 <svg width="256" height="149" viewBox="0 0 256 149" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M117.337 13.9917C105.379 5.46876 91.163 0.683067 76.4856 0.239782C61.8081 -0.203503 47.3289 3.71553 34.8788 11.5013C22.4286 19.2871 12.5669 30.5899 6.54052 43.9804C0.514167 57.371 -1.40609 72.2478 1.02256 86.7297C3.45122 101.212 10.1197 114.648 20.1848 125.34C30.2498 136.032 43.2594 143.499 57.5683 146.797C71.8773 150.096 86.8429 149.077 100.573 143.869C114.303 138.662 193.961 62.7846 202.484 50.827C192.389 41.9084 185.017 40.9927 169.862 43.9804C164.77 51.1243 98.1765 112.813 89.9738 115.924C81.7711 119.035 72.8301 119.643 64.2815 117.673C55.7328 115.702 47.9605 111.241 41.9473 104.854C35.934 98.4658 31.95 90.4384 30.4991 81.7864C29.0481 73.1344 30.1954 64.2465 33.7957 56.2465C37.3961 48.2465 43.2878 41.4938 50.7259 36.8423C58.1641 32.1908 66.8145 29.8495 75.5833 30.1143C84.3521 30.3791 91.8484 32.2362 98.9923 37.328L117.337 13.9917Z" fill="#000000"/>
@@ -132,7 +367,7 @@
                   <path d="M138.663 134.703C150.621 143.226 164.837 148.011 179.514 148.455C194.192 148.898 208.671 144.979 221.121 137.193C233.571 129.407 243.433 118.105 249.459 104.714C255.486 91.3235 257.406 76.4467 254.977 61.9648C252.549 47.4829 245.88 34.0464 235.815 23.3544C225.75 12.6625 212.741 5.19525 198.432 1.89706C184.123 -1.40113 169.157 -0.382156 155.427 4.82511C141.697 10.0324 62.0386 85.9099 53.5157 97.8675C63.611 106.786 70.983 107.702 86.1382 104.714C91.2301 97.5702 157.824 35.8819 166.026 32.7709C174.229 29.6599 183.17 29.0511 191.719 31.0215C200.267 32.992 208.04 37.4532 214.053 43.8409C220.066 50.2287 224.05 58.2561 225.501 66.9081C226.952 75.5601 225.805 84.448 222.204 92.448C218.604 100.448 212.712 107.201 205.274 111.852C197.836 116.504 189.185 118.845 180.417 118.58C171.648 118.315 164.152 116.458 157.008 111.366L138.663 134.703Z" fill="#8f1736"/>
                 </svg>
               </button>
-            </div>
+            </div> -->
             <!-- <div class="color-picker">
               <div> 
                 <label for="color1">Couleur 1 :</label>

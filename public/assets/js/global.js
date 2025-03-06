@@ -109,9 +109,42 @@ const BACKGROUND_LIST = [
     },
 ];
 
+const MODEL_CONFIG = {
+  game: {
+    name: "Game",
+    type: "woman",
+    shadowPath: "./public/shadow/shadow-game-woman.png",
+    path: "./public/model-game-woman.png",
+    svgPath: (design) => `./public/woman/game-${design}-woman.svg`
+  },
+  elite: {
+    name: "Elite",
+    type: "man",
+    shadowPath: "./public/shadow/shadow-elite-men.png",
+    path: "./public/model-elite-man.png",
+    svgPath: (design) => `./public/elite/elite-${design}-men.svg`
+  },
+  ligue: {
+    name: "Ligue",
+    type: "woman",
+    shadowPath: "./public/shadow/shadow-ligue-woman.png",
+    path: "./public/model-ligue-woman.png",
+    svgPath: (design) => `./public/woman/ligue-${design}-woman.svg`
+  },
+  pro: {
+    name: "Pro",
+    type: "woman",
+    shadowPath: "./public/shadow/shadow-ligue-woman.png",
+    path: "./public/model-pro-woman.png",
+    svgPath: (design) => `./public/woman/pro-${design}-woman.svg`
+  }
+};
+
 // Object contain all dynamic properties
 const state = {
-  currentDesign: 0,
+  currentModel: "game",
+  currentDesign: DESIGN_LIST.findIndex((el) => el == DESIGN_START) - 1,
+  // currentDesign: 0,
   selectedPrimaryColor: "",
   selectedSecondaryColor: "",
   selectedTertiaryColor: "",
@@ -128,5 +161,6 @@ export {
     COLOR_PALETTE_LIGHT, 
     COLOR_PALETTE_DARK, 
     BACKGROUND_LIST,
+    MODEL_CONFIG,
     state,
 };
