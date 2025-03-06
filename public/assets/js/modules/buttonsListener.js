@@ -87,3 +87,20 @@ export function enableHorizontalScroll() {
     container.scrollLeft += e.deltaY * 2;
   }, { passive: false }); // passive: false est nécessaire pour que preventDefault fonctionne
 }
+
+export function shareButton(){
+  const shareData = {
+    title: 'Mon site',
+    text: 'Découvrez ce contenu',
+    url: window.location.href,
+  };
+
+  const shareBtn = document.querySelector('#share-button');
+  shareBtn.addEventListener('click', async () => {
+    try{
+      await navigator.share(shareData);
+    } catch(err){
+      console.error('Errror');
+    }
+  })
+}
