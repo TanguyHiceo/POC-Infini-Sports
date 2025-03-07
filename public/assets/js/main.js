@@ -5,6 +5,8 @@ import { initModelSwitcher } from "./modules/switchModel.js";
 import { exportSVGWithColors } from './modules/exportDesign.js';
 import { initTabNavigation } from "./modules/switchTab.js";
 import { toggleFilter } from "./modules/toggleFilter.js";
+import { initDotNavigation } from "./modules/scrollTriggerSlider.js";
+// import { triggerScrollColors } from "./modules/scrollTriggerSlider.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     initModelSwitcher();
@@ -16,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initTabNavigation();
     enableHorizontalScroll();
     toggleFilter();
+    initDotNavigation();
+    // triggerScrollColors();
     // switchBackground();
 
     // Listener to download model

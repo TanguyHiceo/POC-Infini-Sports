@@ -89,6 +89,8 @@ export function enableHorizontalScroll() {
 }
 
 export function shareButton(){
+  // Can put some data, not compatible with Firefox
+  // (https://developer.mozilla.org/fr/docs/Web/API/Navigator/share)
   const shareData = {
     title: 'Mon site',
     text: 'Découvrez ce contenu',
