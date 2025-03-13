@@ -104,5 +104,5 @@ export function shareButton(){
     } catch(err){
       console.error('Errror');
     }
-  })
+  });
 }

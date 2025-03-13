@@ -115,6 +115,7 @@ const MODEL_CONFIG = {
     type: "woman",
     shadowPath: "./public/shadow/shadow-game-woman.png",
     path: "./public/model-game-woman.png",
+    bgPos: "0% 0%",
     svgPath: (design) => `./public/woman/game-${design}-woman.svg`
   },
   elite: {
@@ -122,6 +123,7 @@ const MODEL_CONFIG = {
     type: "man",
     shadowPath: "./public/shadow/shadow-elite-men.png",
     path: "./public/model-elite-man.png",
+    bgPos: "50% 50%",
     svgPath: (design) => `./public/elite/elite-${design}-men.svg`
   },
   ligue: {

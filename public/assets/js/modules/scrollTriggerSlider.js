@@ -1,75 +1,32 @@
-// /**
-//  * scrollTriggerSlider.js
-//  */
-// export function triggerScrollColors(){
-//     const swipeActions = document.querySelectorAll('.swipe-action');
-
-//     swipeActions.forEach(swipeAction => {
-//         let container;
-    
-//         // If swipeAction is in a line who contain .preview-model, then it's for the slider of design
-//         const navRowFlex = swipeAction.closest('.nav-row.flex');
-//         if (navRowFlex) {
-//           container = navRowFlex.querySelector('.preview-model');
-//         }
-//         // Else if swipeAction is in a line who contain .preview-color, then it's for the color palette
-//         else {
-//           const previewColor = swipeAction.closest('.preview-color');
-//           if (previewColor) {
-//             container = previewColor.querySelector('.color-palette-tooltip');
-//           }
-//         }
-    
-//         if (container) {
-//           const nextButton = swipeAction.querySelector('.preview-next-btn');
-//           const prevButton = swipeAction.querySelector('.preview-prev-btn');
-    
-//           nextButton.addEventListener('click', () => {
-//             handleScroll(container, 1);
-//           });
-//           prevButton.addEventListener('click', () => {
-//             handleScroll(container, -1);
-//           });
-//         }
-//     });
-// }
-
-// /**
-//  * Allow to scroll the container in a specific direction
-//  * @param {HTMLElement} container - The container to be scrolled
-//  * @param {number} direction - [1] to move forward and [-1] to move back 
-//  */
-// function handleScroll(container, direction) {
-//     // Each item have a width of 48px and a spacing of 16px
-//     const itemWidthTotal = 48 + 16;
-//     container.scrollLeft += direction * itemWidthTotal;
-// }
+/**
+ * scrollTriggerSlider.js
+ */
 export function initDotNavigation() {
   const swipeActions = document.querySelectorAll('.swipe-action');
 
   swipeActions.forEach(swipe => {
-    // Recherche le conteneur parent pour la swipe-action
+    // Search parent container for swipe-action
     const navRow = swipe.closest('.nav-row');
     if (!navRow) return;
 
-    // Détermine le conteneur à faire défiler
+    // Determine which container to be scroll
     let container = navRow.querySelector('.preview-model');
     if (!container) {
       container = navRow.querySelector('.color-palette-tooltip');
     }
     if (!container) return;
 
-    // Sélectionne les dots dans ce bloc
+    // Select dots in the block
     const dots = swipe.querySelectorAll('.dot');
-    if (dots.length < 3) return; // Au moins 3 dots attendus
+    if (dots.length < 3) return; // Min 3 dots
 
-    // Met à jour les dots au scroll du conteneur
+    // Update dots when we scroll
     container.addEventListener('scroll', () => {
       updateDots(container, dots);
     });
-    updateDots(container, dots); // appel initial
+    updateDots(container, dots);
 
-    // Ajoute un clic sur chaque dot pour défiler vers la position correspondante
+    // Click listener on each dots to scroll at the right position
     dots.forEach((dot, index) => {
       dot.addEventListener('click', () => {
         const maxScroll = container.scrollWidth - container.clientWidth;
@@ -89,25 +46,25 @@ export function initDotNavigation() {
 }
 
 /**
- * Met à jour l'affichage des dots en fonction du pourcentage de scroll du conteneur.
+ * Update display of dots depending on scroll percentage of the container
  *
- * @param {HTMLElement} container - Le conteneur défilable.
- * @param {NodeList} dots - La liste des dots à mettre à jour.
+ * @param {HTMLElement} container - Scrollable container
+ * @param {NodeList} dots - List of dots to be updated
  */
 function updateDots(container, dots) {
   const scrollLeft = container.scrollLeft;
   const maxScroll = container.scrollWidth - container.clientWidth;
 
-  // Si le conteneur n'est pas scrollable, forcer à 0%
+  // If container not scrollable, then force to 0% (fix dot)
   let percentage = 0;
   if (maxScroll > 0) {
     percentage = (scrollLeft / maxScroll) * 100;
   }
 
-  // Réinitialise la classe pour tous les dots
+  // Reset class for each dots
   dots.forEach(dot => dot.classList.remove('expand'));
 
-  // Applique "expand" selon la position de scroll
+  // Apply expand according to scroll position
   if (percentage < 25) {
     dots[0].classList.add('expand');
   } else if (percentage < 75) {
